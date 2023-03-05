@@ -1,11 +1,7 @@
-import React, { FC, PropsWithChildren } from 'react'
+import React, { FC, PropsWithChildren } from 'react';
 
-import './Box.scss'
+import './Box.scss';
 
 export const Box: FC<PropsWithChildren> = ({ children }) => {
-    return (
-        <div className='box'>
-            {children}
-        </div>
-    )
-}
+  return <div className="box">{children}</div>;
+};

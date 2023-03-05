@@ -1,5 +1,10 @@
 # Extension
 
+## Preparation
+
+- Create `.env` from `.env.example`
+- Update `.env` with key from <https://openexchangerates.org/account/app-ids>
+
 ## Development
 
 | Action            | Script          |

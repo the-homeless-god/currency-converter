@@ -1,0 +1,1 @@
+export const DEFAULT_EXCHANGE_RATE_VALUE = 0;

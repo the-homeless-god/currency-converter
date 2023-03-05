@@ -1,1 +1,1 @@
-export * from './CurrencyDisplay'
+export * from './CurrencyDisplay';

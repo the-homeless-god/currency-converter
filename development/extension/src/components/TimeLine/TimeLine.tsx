@@ -1,22 +1,19 @@
-import React, { FC } from 'react'
-import { useValue } from '../../hooks/useValue'
-import TimeAgo from '../TimeAgo/TimeAgo'
+import React, { FC } from 'react';
+import { useRate } from '../../hooks/useRate';
+import TimeAgo from '../TimeAgo/TimeAgo';
 
-import './TimeLine.scss'
+import './TimeLine.scss';
 
-export type TimeLineProps = {}
+export type TimeLineProps = {};
 
 export const TimeLine: FC<TimeLineProps> = () => {
-    const { time } = useValue()
+  const { time } = useRate();
 
-    return (
-        <div className='timeLine'>
-            <span>Updated at —&nbsp;</span >
+  return (
+    <div className="timeLine">
+      <span>Updated at —&nbsp;</span>
 
-            <TimeAgo
-                datetime={time}
-                locale='en_US'
-            />
-        </div>
-    )
-}
+      <TimeAgo datetime={time} locale="en_US" />
+    </div>
+  );
+};

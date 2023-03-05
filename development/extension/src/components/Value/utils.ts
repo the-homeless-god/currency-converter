@@ -1,1 +1,1 @@
-export const VALUE_PLACEHOLDER = 'Введите сумму'
+export const VALUE_PLACEHOLDER = 'Введите сумму';

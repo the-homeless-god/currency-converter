@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "npx prettier --write src"
   },
   "keywords": [],
   "author": "",
@@ -16,12 +17,15 @@
     "@types/react-dom": "^18.0.11",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
+    "dotenv-safe": "^8.2.0",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "node-sass": "^8.0.0",
+    "os-browserify": "^0.3.0",
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -34,6 +38,8 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "timeago.js": "^4.0.2"
+    "path-browserify": "^1.0.1",
+    "timeago.js": "^4.0.2",
+    "util": "^0.12.5"
   }
 }
