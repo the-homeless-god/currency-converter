@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "My Currency Converter",
+    "description": "A simple currency converter extension for Chrome",
+    "version": "1.0.0",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "<all_urls>",
+        "https://openexchangerates.org"
+    ],
+    "browser_action": {
+        "default_title": "My Currency Converter",
+        "default_popup": "popup.html"
+    }
+}

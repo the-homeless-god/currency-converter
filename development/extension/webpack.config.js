@@ -1,11 +1,19 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.tsx',
+  // DEV MODE: entry: './src/index.tsx',
+  entry: {
+    background: './src/background/background.js',
+    content: './src/content/content.js',
+    popup: './src/index.tsx',
+  },
   output: {
-    filename: 'bundle.js',
+    // DEV MODE: filename: 'bundle.js',
+    // path: path.resolve(__dirname, 'dist'),
     path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -24,11 +32,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -37,8 +41,21 @@ module.exports = {
     ],
   },
   plugins: [
+    // DEV MODE: new HtmlWebpackPlugin({
+    //   template: './public/index.html',
+    // }),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: './src/popup/popup.html',
+      filename: 'popup.html',
+      chunks: ['popup'],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'manifest.json',
+          to: '',
+        },
+      ],
     }),
   ],
 };
