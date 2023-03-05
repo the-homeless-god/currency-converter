@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Home } from './pages/Home';
 import './styles/main.scss';
 
 const App = () => {
     return (
-        <div>
-            <h1>Hello, World!</h1>
-        </div>
+        <Home />
     );
 };
 

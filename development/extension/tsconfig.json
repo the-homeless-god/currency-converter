@@ -5,6 +5,7 @@
     "strict": true,
     "jsx": "react",
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   }
 }
